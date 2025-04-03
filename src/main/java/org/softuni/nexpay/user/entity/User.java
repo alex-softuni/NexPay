@@ -48,9 +48,9 @@ public class User {
     private LocalDateTime createdOn;
     @Column(nullable = false)
     private LocalDateTime updatedOn;
-    @OneToMany
+    @OneToMany(mappedBy = "owner")
     private List<Wallet> wallets;
-    @OneToMany
+    @OneToMany(mappedBy = "owner")
     @OrderBy("createdOn DESC")
     private List<Subscription> subscriptions;
 }
