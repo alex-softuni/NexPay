@@ -19,8 +19,6 @@ public class Subscription {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    @ManyToOne(fetch = FetchType.EAGER)
-    private User owner;
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private SubscriptionType type;
@@ -34,4 +32,7 @@ public class Subscription {
     private LocalDateTime createdOn;
     @Column(nullable = false)
     private LocalDateTime updatedOn;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User owner;
+
 }

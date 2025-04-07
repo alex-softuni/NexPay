@@ -9,6 +9,7 @@ import org.softuni.nexpay.user.entity.User;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Currency;
 import java.util.UUID;
 
 @Entity
@@ -27,6 +28,8 @@ public class Wallet {
     private WalletStatus walletStatus;
     @Column(nullable = false)
     private BigDecimal balance;
+    @Column(nullable = false)
+    private Currency currency;
     @Column(nullable = false)
     private LocalDateTime createdOn;
     @Column(nullable = false)

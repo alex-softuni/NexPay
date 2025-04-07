@@ -9,6 +9,7 @@ import org.softuni.nexpay.subscription.entity.Subscription;
 import org.softuni.nexpay.wallet.entity.Wallet;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -38,7 +39,7 @@ public class User {
     private String firstName;
     @Column
     private String lastName;
-    @Column
+    @Column(nullable = false, unique = true)
     private String email;
     @Column
     private String phone;
@@ -49,8 +50,8 @@ public class User {
     @Column(nullable = false)
     private LocalDateTime updatedOn;
     @OneToMany(mappedBy = "owner")
-    private List<Wallet> wallets;
+    private List<Wallet> wallets = new ArrayList<>();
     @OneToMany(mappedBy = "owner")
     @OrderBy("createdOn DESC")
-    private List<Subscription> subscriptions;
+    private List<Subscription> subscriptions = new ArrayList<>();
 }
