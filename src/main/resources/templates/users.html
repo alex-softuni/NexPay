@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users - NexPay</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">NexPay Admin</h1>
+        <ul class="nav-links">
+            <li><a href="/templates/htmllates/html/home.html">Home</a></li>
+            <li><a href="/templates/htmllates/html/users.html">Users</a></li>
+            <li><a href="/templates/htmllates/html/reports.html">Reports</a></li>
+        </ul>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Users Management -->
+    <main>
+        <h2>Manage Users</h2>
+        <p>View and manage registered users.</p>
+
+        <table class="users-table">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>John Doe</td>
+                    <td>john.doe@example.com</td>
+                    <td>
+                        <select class ="role-select">
+                          <option value="user" selected>User</option>
+                          <option value="admin">Admin</option>
+                        </select>
+                      </td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>Jane Smith</td>
+                    <td>jane.smith@example.com</td>
+                    <td>
+                        <select class ="role-select">
+                          <option value="user" selected>User</option>
+                          <option value="admin">Admin</option>
+                        </select>
+                      </td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        © 2025 NexPay. All rights reserved.
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,394 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Page Background */
+body {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Fade-in Animation for the page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Slide-in Animation for Navbar */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Logo */
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Navbar Links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    color: #fcfcfc;
+    transform: scale(1.1);
+    border: 2px solid #fffefb;
+    padding: 5px 12px;
+    background-color: rgba(248, 243, 243, 0.1);
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #ff4d4d;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #cc0000;
+}
+
+/* Header */
+.header {
+    margin-top: 40px;
+    animation: fadeIn 1s ease-out;
+}
+
+.header-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Subscriptions Section */
+.subscriptions-section {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out forwards;
+    display: flex;
+   
+    overflow-y: auto;
+    flex-wrap: wrap; /* Allows wrapping of items if needed */
+}
+
+/* Slide-up Animation for Subscriptions Section */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subscriptions-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.subscriptions-info {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Subscription Item */
+.subscription-item {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    width: 350px; /* Set the width of each card */
+    height: 500px; /* Set the height of each card */
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.subscription-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.subscription-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.subscription-pricing {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.subscription-period {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Subscription Status */
+.subscription-status {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
+/* Active Status - Green */
+.subscription-status.active {
+    background: linear-gradient(45deg, rgba(40, 167, 69, 0.9), rgba(40, 167, 69, 0.8));
+    color: white;
+    border: 2px solid #28a745;
+    box-shadow: 0px 6px 22px rgba(40, 167, 69, 0.25);
+    transform: scale(1.05);
+}
+
+.subscription-status.inactive {
+    background: linear-gradient(45deg, rgba(255, 99, 71, 0.8), rgba(255, 99, 71, 0.7));
+    color: white;
+    border: 2px solid #ff6347;
+}
+
+/* Manage Button */
+.manage-subscription-button {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    align-self: center;
+}
+
+.manage-subscription-button:hover {
+    background-color: #ffffff;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* DROPDOWN BOX SUB-TYPE */
+/* Style for the label */
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Styling the dropdown */
+select {
+    width: 100%;
+    max-width: 300px; /* Adjust width as needed */
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When the dropdown is focused */
+select:focus {
+    border-color: #ffffff;
+    box-shadow: 0px 0px 8px rgba(252, 252, 252, 0.5);
+}
+
+/* Dropdown options */
+select option {
+    font-size: 16px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+/* Hover effect for select box */
+select:hover {
+    border-color:rgb(255, 255, 255);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    select {
+        width: 100%;
+    }
+}
+
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 9px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+    75% {
+        text-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
+      }
+    50% {
+        text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+      }
+    50% {
+        text-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+      }
+
+  }
+
+.default-label {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 36px;
+    border: 2px solid #ffffff; /* Example border */
+   
+    border-style: solid;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+.gold-label {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 36px;
+    border: 2px solid #ffffff; /* Example border */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6);
+    border-style: solid;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.platinum-label {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 36px;
+    border: 2px solid #ffffff; /* Example border */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6);
+    border-style: solid;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    animation: glow 1.5s infinite alternate;
+}
+
+
+/* Footer */
+footer {
+    padding: 10px;
+    font-size: 14px;
+    color: #ccc;
+    margin-top: auto;
+    margin-left: 2000px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out 1.5s forwards; /* Delay for footer */
+}
+
+#DEFAULT {
+    background: linear-gradient(45deg, purple, rgb(47, 0, 255), rgb(183, 0, 255));
+}
+
+#GOLD {
+    font-weight: bolder;
+    background: linear-gradient(45deg, rgb(255, 255, 255), rgb(177, 150, 0), rgb(255, 255, 255));
+}
+
+#PLATINUM {
+    animation: glow 3.5s normal infinite;
+    background: linear-gradient(45deg, rgb(3, 122, 76), rgb(1, 59, 50), rgba(54, 49, 49, 0.548));
+}
+/* Animation for smooth gradient effect */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

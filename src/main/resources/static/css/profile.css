@@ -1,0 +1,401 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Page Background */
+body {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Fade-in Animation for the page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Slide-in Animation for Navbar */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Logo */
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Navbar Links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    color: #fcfcfc;
+    transform: scale(1.1);
+    border: 2px solid #fffefb;
+    padding: 5px 12px;
+    background-color: rgba(248, 243, 243, 0.1);
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.15s;
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #ff4d4d;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #cc0000;
+}
+
+/* Header */
+.header {
+    margin-top: 40px;
+    animation: fadeIn 1s ease-out;
+}
+
+.header-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Profile Section */
+.profile-section {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* Slide-up Animation for Profile Section */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-card {
+    padding: 20px;
+    text-align: left;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.profile-details {
+    margin-bottom: 30px;
+}
+
+.profile-details p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+strong {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.edit-button {
+    background-color: transparent;
+    color: white;
+    padding: 12px 25px;
+    border: 2px solid #ffd700;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #e0a800;
+}
+
+/* Wallets Section */
+.wallets-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.wallets-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-wallet-button {
+    background-color: transparent;
+    color: white;
+    padding: 8px 20px;
+    border: 2px solid #28a745;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-wallet-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #218838;
+}
+
+/* Wallet Info Row */
+.wallets-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wallets-info .info-item {
+    text-align: center;
+}
+
+.wallets-list {
+    margin-top: 20px;
+}
+
+.wallet-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    transition: 0.3s;
+}
+
+.wallet-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Manage Wallet Button */
+.manage-wallet-button {
+    background: transparent;
+    color: white;
+    padding: 6px 15px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.manage-wallet-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #0056b3;
+}
+
+/* Subscriptions Section */
+.subscriptions-section {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.subscriptions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-subscription-button {
+    background-color: transparent;
+    color: white;
+    padding: 8px 20px;
+    border: 2px solid #ffc107;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-subscription-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #e0a800;
+}
+
+.subscriptions-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.subscriptions-info .info-item {
+    text-align: center;
+}
+
+.subscriptions-list {
+    margin-top: 20px;
+}
+
+.subscription-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    transition: 0.3s;
+}
+
+.subscription-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Status Color */
+.subscription-status {
+    color: #007bff;
+}
+
+.subscription-status.inactive {
+    color: #dc3545;
+}
+
+footer {
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+/* Last Update Footer */
+.last-update {
+    font-size: 14px;
+    color: rgb(255, 251, 251);
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .wallets-info, .subscriptions-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wallet-item, .subscription-item {
+        grid-template-columns: 1fr 1fr;
+    }
+}

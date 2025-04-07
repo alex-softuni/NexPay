@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to NexPay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">NexPay</h1>
+            <p class="hero-subtitle">Your Money, Your Way. Manage finances easily and securely.</p>
+            <div class="cta-buttons">
+                <a th:href="@{/login}" class="cta-button">Login</a>
+                <a th:href="@{/register}" class="cta-button">Register</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <h3>Track Spending</h3>
+            <p>Know exactly where your money goes every month.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Save Smartly</h3>
+            <p>Set goals and achieve them with ease.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Secure Payments</h3>
+            <p>Your security is our top priority. Safe and easy transactions.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 NexPay. All rights reserved.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Page Background */
+body {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Fade-in Animation for body */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Slide-in Animation for Navbar */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Navigation Links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    color: #fcfcfc;
+    transform: scale(1.1);
+    border: 2px solid #fffefb;
+    padding: 5px 12px;
+    background-color: rgba(248, 243, 243, 0.1);
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #ff4d4d;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #cc0000;
+}
+
+/* Header */
+.header {
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out 0.5s forwards;
+}
+
+.header-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.header-description {
+    font-size: 18px;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* Fade-up Animation for Header */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Wallet Carousel Container */
+.carousel-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Refined Wallet Card */
+.wallet-card {
+    width: 270px;
+    height: 380px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+    color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.wallet-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.wallet-header {
+    margin-bottom: 10px;
+}
+
+.wallet-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.wallet-balance {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4caf50;
+}
+
+.wallet-info p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 0px;
+    color: #e0e0e0;
+}
+
+/* Style for the Delete Button */
+.delete-btn {
+
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    margin-top: 115px;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .delete-btn:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  /* Darker shadow on hover */
+  }
+  
+  
+
+/* Add Wallet Card */
+.add-wallet {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background like default wallet */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25); /* Same shadow as wallet cards */
+}
+
+.add-wallet:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect on hover */
+}
+
+.add-wallet .add-icon {
+    font-size: 36px;
+}
+
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        flex-direction: column;
+    }
+
+    .wallet-card {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .header-title {
+        font-size: 28px;
+    }
+
+    .header-description {
+        font-size: 16px;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NexPay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">NexPay</h1>
+            <p class="hero-subtitle">Your Money, Your Way. Manage finances easily and securely.</p>
+        </div>
+    </section>
+
+    <!-- Login Form -->
+    <section class="form-container">
+        <h2 class="form-heading">Login</h2>
+        <form action="/login" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" aria-label="Username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" aria-label="Password" required>
+            
+            <button type="submit" class="cta-button">Login</button>
+            <a href="/templates/htmllates/html/register.html" class="login-link">Don't have an account? Register here</a>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 NexPay. All rights reserved.
+    </footer>
+
+</body>
+</html>

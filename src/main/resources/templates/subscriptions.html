@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <link rel="stylesheet" href="/css/subscriptions.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">NexPay</div>
+        <ul class="nav-links">
+            <li><a href="/templates/htmllates/html/admin.html">Admin</a></li>
+            <li><a href="/templates/htmllates/html/home.html">Home</a></li>
+            <li><a href="/templates/htmllates/html/profile.html">Profile</a></li>
+            <li><a href="/templates/htmllates/html/wallets.html">Wallets</a></li>
+            <li><a href="/templates/htmllates/html/transactions.html" >Transactions</a></li>
+            <li><a href="/templates/htmllates/html/subscriptions.html" class="active">Subscriptions</a></li>
+            <li><a href="/templates/htmllates/html/transfers.html">Transfers</a></li>
+            <li><a href="/templates/htmllates/html/contacts.html">Support</a></li>
+
+            
+        </ul>
+        <button class="logout-button">Logout</button>
+    </div>
+
+    <!-- Subscriptions Section -->
+    <div class="subscriptions-section">
+        <div class="subscriptions-header">
+            <h2>Choose Your Plan</h2>
+        </div>
+        <div class="subscriptions-info">
+            <!-- Subscription 1 -->
+            <div class="subscription-item" id="DEFAULT">
+                <h3 class="subscription-name">DEFAULT</h3>
+                <p class="subscription-pricing">Free</p>
+                <p>8% Transaction fee</p>
+                <label class="default-label" for="subscription-item">One Wallet Max</label>                
+                <label for="subscription-type">Select Period:</label>
+                <select id="subscription-type" name="subscriptionType">
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+
+              
+                <button class="subscription-status active">Active</button>
+                <button class="manage-subscription-button">Purchase</button>
+            </div>
+
+            <!-- Subscription 2 -->
+            <div class="subscription-item" id="GOLD">
+                <h3 class="subscription-name">GOLD</h3>
+                <p class="subscription-pricing">$49.99/month</p>
+                <p>4% Transaction fee</p>
+                <label class="gold-label" for="subscription-gold">Up to 3 wallets</label> 
+                <label for="subscription-type">Select Period:</label>
+                <select id="subscription-type" name="subscriptionType">
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+                <button class="subscription-status inactive">Inactive</button>
+                <button class="manage-subscription-button">Purchase</button>
+            </div>
+
+            <!-- Subscription 3 -->
+            <div class="subscription-item" id="PLATINUM">
+                <h3 class="subscription-name">PLATINUM</h3>
+                <p class="subscription-pricing">$199.99/month</p>
+                <p>2% Transaction fee</p>
+                <p>5% Cashback</p>
+                <p></p>
+                <label class="platinum-label" for="subscription-gold">Up to 7 wallets</label> 
+                <label for="subscription-type">Select Period:</label>
+                <select id="subscription-type" name="subscriptionType">
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+                <button class="subscription-status active">Active</button>
+                <button class="manage-subscription-button">Purchase</button>
+            </div>
+    
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+       © 2025 NexPay. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wallets - NexPay</title>
+    <link rel="stylesheet" href="/css/wallets.css">
+</head>
+<body>
+
+    <!-- Navbar (Fixed at the top) -->
+    <nav class="navbar">
+        <h1 class="logo">NexPay</h1>
+        <ul class="nav-links">
+            <li><a href="/templates/htmllates/html/admin.html">Admin</a></li>
+            <li><a href="/templates/htmllates/html/home.html">Home</a></li>
+            <li><a href="/templates/htmllates/html/profile.html">Profile</a></li>
+            <li><a href="/templates/htmllates/html/wallets.html" class="active">Wallets</a></li>
+            <li><a href="/templates/htmllates/html/transactions.html">Transactions</a></li>
+            <li><a href="/templates/htmllates/html/subscriptions.html">Subscriptions</a></li>
+            <li><a href="/templates/htmllates/html/transfers.html">Transfers</a></li>
+            <li><a href="/templates/htmllates/html/settings.html">Support</a></li>
+        </ul>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="content-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="header-title">My Wallets</h1>
+            <p class="header-description">Manage your wallets and digital assets in one place.</p>
+        </header>
+
+        <!-- Carousel Section -->
+        <section class="wallets-carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <!-- Dynamically Render Wallet Cards using Thymeleaf -->
+                    <div th:each="wallet : ${wallets}" class="wallet-card" th:onclick="|location.href='/wallets/' + ${wallet.id}|">
+                        <div class="wallet-header">
+                            <h2 class="wallet-name" th:text="${wallet.name}">Savings</h2>
+                          
+                            <span class="wallet-balance" th:text="'$' + ${wallet.balance}">1000$</span>
+                        </div>
+                        <div class="wallet-info">
+                            <p><strong>Wallet ID:</strong> <span th:text="${wallet.id}">1234</span></p>
+                            <p><strong>Created:</strong> <span th:text="${wallet.dateCreated}">12.12.2012</span></p>
+                            <p><strong>Last Update:</strong> <span th:text="${wallet.lastUpdated}">12.12.2022</span></p>
+                            <button class="delete-btn"><!-- Trashcan using Unicode -->
+                       
+                                </button>
+                        </div>
+                    </div>
+
+                    <!-- Add New Wallet Card -->
+                    <div class="wallet-card add-wallet" onclick="location.href='/wallets/new'">
+                        <div class="add-icon">+</div>
+                        <p>Add New Wallet</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Navigation Buttons -->
+            <button class="carousel-nav prev-btn" onclick="moveCarousel('prev')">❮</button>
+            <button class="carousel-nav next-btn" onclick="moveCarousel('next')">❯</button>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 NexPay. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/wallets.js"></script>
+</body>
+</html>

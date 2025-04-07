@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - NexPay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">NexPay</h1>
+        <ul class="nav-links">
+            <li><a href="/templates/htmllates/html/admin.html">Admin</a></li>
+            <li><a href="/templates/htmllates/html/home.html">Home</a></li>
+            <li><a href="/templates/htmllates/html/profile.html" class="active">Profile</a></li>
+            <li><a href="/templates/htmllates/html/wallets.html">Wallets</a></li>
+            <li><a href="/templates/htmllates/html/transactions.html">Transactions</a></li>
+            <li><a href="/templates/htmllates/html/subscriptions.html">Plans</a></li>
+            <li><a href="/templates/htmllates/html/transfers.html">Transfers</a></li>
+            <li><a href="/templates/htmllates/html/contacts.html">Support</a></li>
+        </ul>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </nav>
+
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t39.30808-6/475835619_9237557182967083_7050815266927102512_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=u0OeU-pKc4sQ7kNvgGkLHbQ&_nc_oc=AdhoJSbgHSITwo0x82nVaLIPenwoytOIt4JMuXS_uGfcEKXqYlISwr75wX_kG5MiWo4&_nc_zt=23&_nc_ht=scontent.fsof11-1.fna&_nc_gid=AoT-xkNdZGUMw_L6ZIONgp5&oh=00_AYFUrwY8MGFRUyK0g-oTegJjGSlsKASXCoGoGEK1XSAWDA&oe=67D48508" alt="Profile Picture" class="profile-pic">
+                <h2 class="user-name">John Doe</h2>
+            </div>
+            <div class="profile-details">
+                <p><strong>First Name:</strong> John</p>
+                <p><strong>Last Name:</strong> Doe</p>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+                <p><strong>Phone:</strong> +1234567890</p>
+                <p><strong>Location:</strong> New York, USA</p>
+                <p><strong>Joined:</strong> January 15, 2022</p>
+            </div>
+            <button class="edit-button" onclick="editProfile()">Edit Profile</button>
+        </div>
+        <footer class="last-update">Last update: March 13, 2025</footer>
+    </section>
+
+    <!-- Wallets Section -->
+    <div class="wallets-section">
+        <div class="wallets-header">
+            <h2 class="wallets-title">Your Wallets</h2>
+            <button class="add-wallet-button" onclick="addWallet()">Manage</button>
+        </div>
+        
+        <!-- Wallet Information Row -->
+        <div class="wallets-info">
+            <div class="info-item">
+                <strong>Name</strong>
+            </div>
+            <div class="info-item">
+                <strong>ID</strong>
+            </div>
+            <div class="info-item">
+                <strong>Balance</strong>
+            </div>
+            <div class="info-item">
+                <strong>Status</strong>
+            </div>
+        </div>
+        
+        <!-- Wallets List -->
+        <div class="wallets-list">
+            <div class="wallet-item">
+                <div class="wallet-name">Main Wallet</div>
+                <div class="wallet-id">1234567890</div>
+                <div class="wallet-balance">$1,250.00</div>
+                <div class="wallet-status">Active</div>
+            </div>
+            <div class="wallet-item">
+                <div class="wallet-name">Savings</div>
+                <div class="wallet-id">0987654321</div>
+                <div class="wallet-balance">$5,000.00</div>
+                <div class="wallet-status">Active</div>
+            </div>
+            <div class="wallet-item">
+                <div class="wallet-name">Savings</div>
+                <div class="wallet-id">0987654321</div>
+                <div class="wallet-balance">$5,000.00</div>
+                <div class="wallet-status">Active</div>
+            </div>
+            <div class="wallet-item">
+                <div class="wallet-name">Savings</div>
+                <div class="wallet-id">0987654321</div>
+                <div class="wallet-balance">$5,000.00</div>
+                <div class="wallet-status">Active</div>
+            </div>
+            <div class="wallet-item">
+                <div class="wallet-name">Savings</div>
+                <div class="wallet-id">0987654321</div>
+                <div class="wallet-balance">$5,000.00</div>
+                <div class="wallet-status">Active</div>
+            </div>
+            <div class="wallet-item">
+                <div class="wallet-name">Savings</div>
+                <div class="wallet-id">0987654321</div>
+                <div class="wallet-balance">$5,000.00</div>
+                <div class="wallet-status">Active</div>
+            </div>
+            <div class="wallet-item">
+                <div class="wallet-name">Savings</div>
+                <div class="wallet-id">0987654321</div>
+                <div class="wallet-balance">$5,000.00</div>
+                <div class="wallet-status">Active</div>
+            </div>
+            <div class="wallet-item">
+                <div class="wallet-name">Savings</div>
+                <div class="wallet-id">0987654321</div>
+                <div class="wallet-balance">$5,000.00</div>
+                <div class="wallet-status">Active</div>
+            </div>
+            <div class="wallet-item">
+                <div class="wallet-name">Savings</div>
+                <div class="wallet-id">0987654321</div>
+                <div class="wallet-balance">$5,000.00</div>
+                <div class="wallet-status">Active</div>
+            </div>
+        </div>
+        <footer class="last-update">Last update: March 13, 2025</footer>
+    </div>
+
+    <!-- Subscriptions Section -->
+    <div class="subscriptions-section">
+        <div class="subscriptions-header">
+            <h2 class="subscriptions-title">Your Subscriptions</h2>
+            <button class="add-subscription-button" onclick="addSubscription()">Manage</button>
+        </div>
+        
+        <!-- Subscriptions Information Row -->
+        <div class="subscriptions-info">
+            <div class="info-item">
+                <strong>Name</strong>
+            </div>
+            <div class="info-item">
+                <strong>Pricing</strong>
+            </div>
+            <div class="info-item">
+                <strong>Period</strong>
+            </div>
+            <div class="info-item">
+                <strong>Status</strong>
+            </div>
+        </div>
+        
+        <!-- Subscriptions List -->
+        <div class="subscriptions-list">
+            <div class="subscription-item">
+                <div class="subscription-name">Netflix</div>
+                <div class="subscription-pricing">$15.99/month</div>
+                <div class="subscription-period>Monthly</div>
+                <div class="subscription-status">Active</div>
+            </div>
+            <div class="subscription-item">
+                <div class="subscription-name">Spotify</div>
+                <div class="subscription-pricing">$9.99/month</div>
+                <div class="subscription-period">Monthly</div>
+                <div class="subscription-status">Active</div>
+            </div>
+        </div>
+        <footer class="last-update">Last update: March 13, 2025</footer>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 NexPay. All rights reserved.
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = "login.html"; // Adjust this path accordingly for Thymeleaf use
+        }
+
+        function editProfile() {
+            window.location.href = "edit-profile.html"; // Redirect to edit-profile.html
+        }
+
+        function addWallet() {
+            window.location.href = "wallets.html"; // Adjust this path accordingly for Thymeleaf use
+        }
+
+    
+        function addSubscription() {
+            window.location.href = "subscriptions.html"; // Adjust this path accordingly for Thymeleaf use
+        }
+
+    </script>
+
+</body>
+</html>

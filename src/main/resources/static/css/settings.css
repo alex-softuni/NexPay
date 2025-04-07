@@ -1,0 +1,206 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #0052D4, #4364F7, #6FB1FC);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #003C8F;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Navigation Links */
+
+/* Navbar Links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 5px 10px; /* Added some padding */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Hover effect for anchor tags */
+.nav-links a:hover {
+    color: #fcfcfc; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+    border: 2px solid #fffefb; /* Tiny border around the anchor */
+    padding: 5px 12px; /* Add a little extra padding when hovered to ensure it scales well */
+    background-color: rgba(248, 243, 243,0.1); /* Subtle background color */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.15s;
+}
+
+/* Main Container */
+.container {
+    width: 40%;  /* Reduced width to half */
+    max-width: 500px;  /* Reduced max-width */
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.6);  /* Increased transparency */
+    padding: 20px;  /* Smaller padding */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    color: black;
+    text-align: left;
+    animation: fadeIn 0.8s ease-in-out;
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: 500;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.contact-form input, 
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+/* Prevent text area resizing */
+.contact-form textarea {
+    resize: none; /* Disables resizing */
+}
+
+/* Input Focus Animation */
+.contact-form input:focus, 
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border: 1px solid #0052D4;
+    box-shadow: 0 0 8px rgba(0, 82, 212, 0.5);
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* Button */
+.btn {
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-submit {
+    background-color: #0052D4;
+    color: white;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+.btn-submit:hover {
+    background-color: #003C8F;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 20px;
+    background: #003C8F;
+    color: white;
+    text-align: center;
+    
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 55%;  /* Adjusted for smaller container on medium screens */
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 80%;  /* Even smaller container on small screens */
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 24px; /* Smaller logo on very small screens */
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 15px; /* Smaller input text for small devices */
+    }
+}

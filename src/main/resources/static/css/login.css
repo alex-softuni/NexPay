@@ -1,0 +1,181 @@
+/* Reset some default styling for a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s ease infinite; /* Faster gradient animation */
+    color: white;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Animate the gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hero Section Styling */
+.hero {
+    background: transparent; /* Make the hero section blend with body */
+    text-align: center;
+    padding: 40px 20px;
+    position: relative; /* This is important for absolute positioning of animated title */
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    opacity: 0; /* Start as invisible */
+    transform: scale(0.5); /* Start small */
+    animation: titleAnimation 1s ease-out forwards; /* Faster animation for title */
+}
+
+/* Animation for the hero title */
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form Section Styling */
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out forwards; /* Added faster fade-in and slide-up */
+}
+
+/* Animation for the form container */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-heading {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+a.login-link {
+    text-align: center;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.login-link:hover {
+    color: #0056b3;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 0.5s; /* Added faster fade-in and slide-up */
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1s; /* Faster footer fade-in and slide-up */
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

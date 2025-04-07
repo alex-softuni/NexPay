@@ -1,0 +1,205 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Page Background */
+body {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Fade-in Animation for body */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 0.5s ease-out forwards;
+   
+}
+
+/* Slide-in Animation for Navbar */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/* Navbar Links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 5px 10px; /* Added some padding */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Hover effect for anchor tags */
+.nav-links a:hover {
+    color: #fcfcfc; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+    border: 2px solid #fffefb; /* Tiny border around the anchor */
+    padding: 5px 12px; /* Add a little extra padding when hovered to ensure it scales well */
+    background-color: rgba(248, 243, 243,0.1); /* Subtle background color */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.15s;
+   
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #ff4d4d;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #cc0000;
+}
+
+/* Header */
+.header {
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out 0.5s forwards; /* Delay for header */
+}
+
+.header-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Fade-up Animation for Header */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Transaction Table */
+.transaction-table {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.486);
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgb(255, 255, 255);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out 1s forwards; /* Delay for table */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    
+}
+
+th, td {
+    padding: 12px 20px;
+    text-align: left;
+}
+
+th {
+    background-color: #fafafa;
+    color: black;
+}
+
+td {
+    background-color: #ffffff8e;
+    color: black;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.completed {
+    color: green;
+}
+
+.pending {
+    color: orange;
+}
+
+.failed {
+    color: red;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    font-size: 14px;
+    color: #ccc;
+    margin-top: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease-out 1.5s forwards; /* Delay for footer */
+}

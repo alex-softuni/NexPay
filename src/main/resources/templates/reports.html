@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - NexPay</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">NexPay Admin</h1>
+        <ul class="nav-links">
+            <li><a href="/templates/htmllates/html/home.html">Home</a></li>
+            <li><a href="/templates/htmllates/html/users.html">Users</a></li>
+            <li><a href="/templates/htmllates/html/reports.html">Reports</a></li>
+        </ul>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Reports Section -->
+    <main>
+        <h2>Transaction Reports</h2>
+        <p>Detailed report of transactions and revenue.</p>
+
+        <table class="reports-table">
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>User</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#TXN-78901</td>
+                    <td>John Doe</td>
+                    <td>$250.00</td>
+                    <td class="status success">Completed</td>
+                </tr>
+                <tr>
+                    <td>#TXN-78902</td>
+                    <td>Jane Smith</td>
+                    <td>$150.00</td>
+                    <td class="status pending">Pending</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        © 2025 NexPay. All rights reserved.
+    </footer>
+
+</body>
+</html>

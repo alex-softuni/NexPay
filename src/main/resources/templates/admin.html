@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - NexPay</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">NexPay Admin</h1>
+        <ul class="nav-links">
+            <li><a href="/templates/htmllates/html/home.html">Home</a></li>
+            <li><a href="/templates/htmllates/html/users.html">Users</a></li>
+            <li><a href="/templates/htmllates/html/reports.html">Reports</a></li>
+        </ul>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <main>
+        <h2>Admin Dashboard</h2>
+        <p>Overview of user activity and transactions.</p>
+
+        <!-- Admin Reports -->
+        <section class="admin-reports">
+            <div class="report-card">
+                <h3>Total Users</h3>
+                <p id="total-users">1,245</p>
+            </div>
+            <div class="report-card">
+                <h3>Total Transactions</h3>
+                <p id="total-transactions">8,567</p>
+            </div>
+            <div class="report-card">
+                <h3>Revenue Generated</h3>
+                <p id="revenue">$120,450</p>
+            </div>
+        </section>
+
+        <!-- Admin Controls -->
+        <section class="admin-actions">
+            <button class="admin-button" onclick="window.location.href='users.html'">Manage Users</button>
+            <button class="admin-button" onclick="window.location.href='reports.html'">View Reports</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 NexPay. All rights reserved.
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

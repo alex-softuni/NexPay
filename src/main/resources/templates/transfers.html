@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfers | NexPay</title>
+    <!-- Use the Montserrat font instead of Arial -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/transfers.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">NexPay</h1>
+        <ul class="nav-links">
+            <li><a href="/templates/htmllates/html/admin.html">Admin</a></li>
+            <li><a href="/templates/htmllates/html/home.html">Home</a></li>
+            <li><a href="/templates/htmllates/html/profile.html">Profile</a></li>
+            <li><a href="/templates/htmllates/html/wallets.html">Wallets</a></li>
+            <li><a href="/templates/htmllates/html/transactions.html">Transactions</a></li>
+            <li><a href="/templates/htmllates/html/subscriptions.html">Subscriptions</a></li>
+            <li><a href="/templates/htmllates/html/transfers.html" class="active">Transfers</a></li>
+            <li><a href="/templates/htmllates/html/contacts.html">Support</a></li>
+        </ul>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Transfer Form -->
+    <section class="form-container">
+        <h2 class="form-heading"><strong>Transfer</strong></h2>
+        <form action="/transfer" method="POST">
+            
+            <!-- Wallet Selection -->
+            <label for="wallet"><strong>Choose Wallet</strong></label>
+            <select id="wallet" name="wallet" required>
+                <option value="" disabled selected>Select your wallet</option>
+                <option value="wallet1">Wallet 1</option>
+                <option value="wallet2">Wallet 2</option>
+                <option value="wallet3">Wallet 3</option>
+            </select>
+
+
+            <!-- Receiver Username -->
+            <label for="receiver"><strong>Receiver Username</strong></label>
+            <input type="text" id="receiver" name="receiver" placeholder="Enter receiver username" required>
+
+            <!-- Transfer Amount -->
+            <label for="amount"><strong>Amount</strong></label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount" min="0.01" step="0.01" required>
+
+            <!-- Submit Button -->
+            <button href="/html/transfer-status.html" type="submit" class="cta-button">Initiate Transfer</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 NexPay. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = "/logout";
+        }
+    </script>
+
+</body>
+</html>

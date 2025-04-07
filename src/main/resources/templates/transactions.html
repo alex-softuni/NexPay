@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - NexPay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/transactions.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">NexPay</h1>
+        <ul class="nav-links">
+            <li><a href="/templates/htmllates/html/admin.html">Admin</a></li>
+            <li><a href="/templates/htmllates/html/home.html">Home</a></li>
+            <li><a href="/templates/htmllates/html/profile.html">Profile</a></li>
+            <li><a href="/templates/htmllates/html/wallets.html">Wallets</a></li>
+            <li><a href="/templates/htmllates/html/transactions.html" class="active">Transactions</a></li>
+            <li><a href="/templates/htmllates/html/subscriptions.html">Subscriptions</a></li>
+            <li><a href="/templates/htmllates/html/transfers.html">Transfers</a></li>
+            <li><a href="/templates/htmllates/html/contacts.html">Support</a></li>
+
+            
+        </ul>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1 class="header-title">NexPay Transactions</h1>
+    </header>
+
+    <!-- Transaction Table -->
+    <section class="transaction-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                    <th>Balance</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td>$150.00</td>
+                    <td>$3,000.00</td>
+                    <td>Payment for groceries</td>
+                    <td>2025-03-08</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td>$50.00</td>
+                    <td>$2,950.00</td>
+                    <td>Transfer to savings</td>
+                    <td>2025-03-07</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><span class="status failed">Failed</span></td>
+                    <td>$200.00</td>
+                    <td>$2,750.00</td>
+                    <td>Payment for utilities</td>
+                    <td>2025-03-06</td>
+                </tr>
+               
+              
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 NexPay. All rights reserved.
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

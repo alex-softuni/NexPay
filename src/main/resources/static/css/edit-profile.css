@@ -1,0 +1,161 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Page Background */
+body {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center navbar items */
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative; /* Allows absolute positioning of logo */
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    position: absolute; /* Position the logo absolutely within the navbar */
+    left: 20px; /* 20px from the left edge of the page */
+}
+
+/* Navigation Links */
+
+/* Navbar Links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 5px 10px; /* Added some padding */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Hover effect for anchor tags */
+.nav-links a:hover {
+    color: #fcfcfc; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+    border: 2px solid #fffefb; /* Tiny border around the anchor */
+    padding: 5px 12px; /* Add a little extra padding when hovered to ensure it scales well */
+    background-color: rgba(248, 243, 243,0.1); /* Subtle background color */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.15s;
+}
+/* Edit Profile Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.profile-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.profile-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.profile-form input {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.profile-form input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.profile-form button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+}
+
+/* Fade-in Animation for Edit Profile */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
