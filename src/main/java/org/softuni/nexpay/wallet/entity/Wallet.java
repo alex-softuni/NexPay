@@ -21,7 +21,7 @@ public class Wallet {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String walletName;
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
