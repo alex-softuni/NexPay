@@ -23,7 +23,10 @@
             <li><a th:href="@{/transfers}">Transfers</a></li>
             <li><a th:href="@{/contacts}">Support</a></li>
         </ul>
-        <button class="logout-button" onclick="logout()">Logout</button>
+        <form th:action="@{/logout}" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <button class="logout-button" type="submit">Logout</button>
+        </form>
     </nav>
 
     <!-- Dashboard Section -->
@@ -65,11 +68,6 @@
         © 2025 NexPay. All rights reserved.
     </footer>
 
-    <script th:inline="javascript">
-        function logout() {
-            window.location.href = /*[[@{/}]]*/ '/';
-        }
-    </script>
 
 </body>
 </html>
