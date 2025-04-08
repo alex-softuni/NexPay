@@ -27,12 +27,17 @@
             <label for="username">Username</label>
             <input th:field="*{username}" type="text" id="username" name="username" placeholder="Enter your username" aria-label="Username" required>
             <label class="error-warning" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></label>
+            <label class="error-warning" th:text="${usernameAlreadyExistMessage}"></label>
+
             <label for="email">Email</label>
             <input th:field="*{email}" type="email" id="email" name="email" placeholder="Enter your email" aria-label="Email" required>
             <label class="error-warning" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
+            <label class="error-warning" th:text="${emailAlreadyExistMessage}"></label>
+
             <label for="password">Password</label>
             <input th:field="*{password}" type="password" id="password" name="password" placeholder="Enter your password" aria-label="Password" required>
             <label class="error-warning" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></label>
+
             <a th:href="@{/login}" class="login-link">Already registered? Login here</a>
             
             <button type="submit" class="cta-button">Register</button>

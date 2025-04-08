@@ -22,15 +22,15 @@
     <!-- Login Form -->
     <section class="form-container">
         <h2 class="form-heading">Login</h2>
-        <form action="/login" method="POST">
+        <form th:action="@{/login}" th:method="POST" th:object="${loginRequest}">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" aria-label="Username" required>
+            <input th:field="*{username}" type="text" id="username" name="username" placeholder="Enter your username" aria-label="Username" required>
             
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" aria-label="Password" required>
+            <input th:field="*{password}" type="password" id="password" name="password" placeholder="Enter your password" aria-label="Password" required>
             
             <button type="submit" class="cta-button">Login</button>
-            <a href="/templates/htmllates/html/register.html" class="login-link">Don't have an account? Register here</a>
+            <a th:href="@{/register}" class="login-link">Don't have an account? Register here</a>
         </form>
     </section>
 
